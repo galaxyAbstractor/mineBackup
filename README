@@ -1,0 +1,5 @@
+* Automatically backs up every n minutes
+* Remembers the source directory
+* Remembers the backup directory
+* Saves n backups concurrently, if the latest would be corrupt by any chance (Computer crashes when backup is in process etc), take the one before it
+* Stats :D

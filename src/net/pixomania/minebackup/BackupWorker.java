@@ -16,7 +16,7 @@ import javax.swing.SwingWorker;
 import org.apache.commons.io.FileUtils;
 
 /**
- *
+ * This SwingWorker will make the copying of files, and stats generation
  * @author vigge_sWe
  */
 public class BackupWorker extends SwingWorker<Void, Void> {
@@ -24,6 +24,13 @@ public class BackupWorker extends SwingWorker<Void, Void> {
     private String dest;
     private int number;
 
+    /**
+     * The constructor of the worker. Here we set the passed variables to some
+     * local vars
+     * @param src Sourcefiles to copy
+     * @param dest Destination of the backupped files
+     * @param number Current number of backup we are on, for concurrent backups
+     */
     public BackupWorker(String src, String dest, int number){
         // Set the params
         this.src = src;

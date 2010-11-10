@@ -23,12 +23,12 @@ Libs
 ========
 mineBackup uses a couple of libs, all found under libs/
 
-Substance <https://substance.dev.java.net/>
-Substance-SwingX <https://substance-swingx.dev.java.net/>
-SwingX <https://swingx.dev.java.net/>
-Apache Commons IO <http://commons.apache.org/io/>
+* Substance <https://substance.dev.java.net/>
+* Substance-SwingX <https://substance-swingx.dev.java.net/>
+* SwingX <https://swingx.dev.java.net/>
+* Apache Commons IO <http://commons.apache.org/io/>
 
 Changelog
 ========
-v1. initial release
-v1.1 Added customization of interval, files to backup, and # of concurrent copies. Linux support. Mac OS X should work, but untested.
+* v1. initial release
+* v1.1 Added customization of interval, files to backup, and # of concurrent copies. Linux support. Mac OS X should work, but untested.

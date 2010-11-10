@@ -58,7 +58,14 @@ public class BackupWorker extends SwingWorker<Void, Void> {
 
             // Write stats
             File stats = new File("stats.txt");
-            if(!stats.exists())stats.createNewFile();
+            if(!stats.exists()){
+                stats.createNewFile();
+                fstream = new FileWriter(stats);
+                out = new BufferedWriter(fstream);
+
+                out.write("0 0 0 0 0");
+                out.close();
+            }
             Scanner sc = new Scanner(stats);
 
             int backupsThisTime = sc.nextInt();

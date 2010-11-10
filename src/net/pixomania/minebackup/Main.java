@@ -110,7 +110,14 @@ public class Main extends javax.swing.JFrame{
             // First, as we just started the app, we need to set the
             // ThisTime vars to 0, and update the file
             File stats = new File("stats.txt");
-            if(!stats.exists())stats.createNewFile();
+            if(!stats.exists()){ 
+                stats.createNewFile();
+                FileWriter fstream = new FileWriter(stats);
+                BufferedWriter out = new BufferedWriter(fstream);
+
+                out.write("0 0 0 0 0");
+                out.close();
+            }
             sc = new Scanner(stats);
             int backupsThisTime = sc.nextInt();
             int backupsTotal = sc.nextInt();
@@ -123,7 +130,7 @@ public class Main extends javax.swing.JFrame{
 
             sc.close();
             
-            FileWriter fstream = new FileWriter(new File("stats.txt"));
+            FileWriter fstream = new FileWriter(stats);
             BufferedWriter out = new BufferedWriter(fstream);
 
             out.write(backupsThisTime+" "+ backupsTotal+" "+dataThisTime+" "+dataTotal+" "+time);
